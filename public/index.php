@@ -13,6 +13,5 @@
  */
 define('WP_USE_THEMES', true);
 
-echo "test word";
 /** Loads the WordPress Environment and Template */
 require( dirname( __FILE__ ) . '/wp/wp-blog-header.php' );
