@@ -1,4 +1,10 @@
-#REVISO WORDPRESS COMPOSE DOCKER PIPELINE
+## wordpress pipeline reviso
+
+CI: Jenkins
+
+url: http://35.158.236.53/
+
+
 # docker-wordpress
 
 This repository is an example configuration of [Wordpress](http://wordpress.org/), running on multiple
