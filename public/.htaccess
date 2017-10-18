@@ -9,7 +9,7 @@
 #RewriteRule . /index.php [L]
 #</IfModule>
 
-<Directory "/var/www/wordpress/public">
+<Directory "/var/www/wordpress/public/wp">
 	<IfModule mod_rewrite.c>
 			RewriteEngine On
 			RewriteBase /
