@@ -9,7 +9,6 @@
 #RewriteRule . /index.php [L]
 #</IfModule>
 
-<Directory "/var/www/wordpress">
         <IfModule mod_rewrite.c>
 						RewriteEngine On
 						RewriteBase /
@@ -26,7 +25,6 @@
 						RewriteRule . index.php [L]
 
         </IfModule>
-</Directory>
 
 
 # END WordPress
