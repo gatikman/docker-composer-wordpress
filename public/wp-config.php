@@ -77,7 +77,7 @@ $table_prefix  = 'wp_';
 define('WP_DEBUG', false);
 
 // Activate sunrise script
-define('SUNRISE', TRUE);
+#define('SUNRISE', TRUE);
 
 define( 'WP_ALLOW_MULTISITE', true );
 
