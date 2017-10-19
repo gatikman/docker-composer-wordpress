@@ -18,11 +18,16 @@
           "fancyguy/webroot-installer": "1.0.0"
         }
       }
+    },
+		{
+      "type": "vcs",
+      "url": "https://github.com/gatikman/wp-english-wp-admin"
     }
   ],
   "require": {
     "wordpress": "4.*",
-    "fancyguy/webroot-installer": "1.0.0"
+    "fancyguy/webroot-installer": "1.0.0",
+		"wp-english-wp-admin/wp-english-wp-admin": "master"
   },
   "extra": {
     "webroot-dir": "public/wp",
