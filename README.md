@@ -18,7 +18,7 @@ This environment uses 2 containers:
 1. `web` container with Apache2 and PHP, being build from `Dockerfile`. This container shares application sources with
 host machine.
 2. `db` container with MySQL, pulled directly from [tutum/mysql](https://registry.hub.docker.com/u/tutum/mysql/) image
-on Docker Hub. This container shares DB data with boot2docker VM.
+on Docker Hub. 
 
 Containers are managed by Docker Compose. The configuration is in `docker-compose.yml`.
 
@@ -26,24 +26,26 @@ Containers are managed by Docker Compose. The configuration is in `docker-compos
 
 Basically, you need to have [Docker Compose installed](http://docs.docker.com/compose/#installation-and-set-up).
 
-If you are using Mac OS X or Windows as your host OS, I recommend using [boot2docker](http://boot2docker.io/)
+If you are using Mac OS X (Tested on 10.13) or Windows as your host OS, I recommend using [Docker Toolbox](https://www.docker.com/products/docker-toolbox)
 as proxy VM to run Docker.
 
+
 ### Mac OS X
-If Mac OS X is your host OS and you use boot2docker to launch Docker you will probably encounter [the bug with writing
-to shared volume](https://github.com/boot2docker/boot2docker/issues/581). The following workaround works perfectly:
+If Mac OS X is your host OS and you use toolbox to launch Docker you will probably encounter [the bug with writing
+to shared volume]. The following workaround works perfectly:
 
-1. SSH to boot2docker VM: `boot2docker ssh`
+### Once Docker Toolbox is Installed
+0. Go to settings > shared folders > click + > choose the folder path to [`docker-composer-wordpress`]
 
-2. Edit the `/var/lib/boot2docker/profile` file: `sudo vi /var/lib/boot2docker/profile`
+1. Edit the `docker-composer-wordpress/docker-compose.yml` file: `sudo vim docker-compose.yml`
 
-3. Paste the following lines:
+3. Add a # before the following lines (this will remove the local volume reference):
     ```
-    umount /Users
-    mount -t vboxsf -o uid=33,gid=33 Users /Users
+		#volumes:
+    #- /mnt/sda1/var/lib/wordpress:/var/lib/mysql
     ```
 
-4. Exit the VM and restart it: `boot2docker restart`
+4. Exit and restart it: `docker-compose build`
 
 ## How to use it?
 
