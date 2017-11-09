@@ -23,8 +23,13 @@
   "require": {
     "wordpress": "4.*",
     "fancyguy/webroot-installer": "1.0.0",
-		"wcm/wp-importer":"require-dev"
+		"wcm/wp-importer":"dev-master"
   },
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"config": {
+		"secure-http": false
+		},
   "extra": {
     "webroot-dir": "public/wp",
     "webroot-package": "wordpress"
