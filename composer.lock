@@ -4,7 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3d2657b16f895546956df8a103086a6d",
+    "hash": "aca85f8c8d65bec2175dba5b8e527c7c",
+    "content-hash": "4dff919e3ac83d2ca292ff6555a21f95",
     "packages": [
         {
             "name": "fancyguy/webroot-installer",
@@ -49,6 +50,31 @@
             "time": "2013-01-29 22:51:45"
         },
         {
+            "name": "wcm/wp-importer",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wecodemore/wp-importer.git",
+                "reference": "1f36774cadf75bab0923a93b8ff4c539dbe7f049"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wecodemore/wp-importer/zipball/1f36774cadf75bab0923a93b8ff4c539dbe7f049",
+                "reference": "1f36774cadf75bab0923a93b8ff4c539dbe7f049",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2"
+            },
+            "type": "wordpress-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL2+"
+            ],
+            "description": "WordPress importer plugin. Bug free version.",
+            "time": "2016-08-09 10:40:52"
+        },
+        {
             "name": "wordpress",
             "version": "4.2.2",
             "dist": {
@@ -65,9 +91,11 @@
     ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "stable",
-    "stability-flags": [],
-    "prefer-stable": false,
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "wcm/wp-importer": 20
+    },
+    "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": []
