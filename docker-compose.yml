@@ -11,7 +11,7 @@ db:
   environment:
     MYSQL_USER: wordpress
     MYSQL_PASS: password
-  volumes:
-    - /mnt/sda1/var/lib/wordpress:/var/lib/mysql
+#  volumes:
+#    - /mnt/sda1/var/lib/wordpress:/var/lib/mysql
   ports:
     - "3306:3306"
